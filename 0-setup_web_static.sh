@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# COMMENT
 sudo mkdir -p /data/web_static/releases/test/
 sudo bash -c 'echo """<html>
  <head>
