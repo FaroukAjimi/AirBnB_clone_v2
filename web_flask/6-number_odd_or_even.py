@@ -45,10 +45,9 @@ def render(n):
         abort(404)
 
 
-@app.route("/number_odd_or_even/<n>", strict_slashes=False)
+@app.route("/number_odd_or_even/<int:n>", strict_slashes=False)
 def renderooe(n):
     try:
-        int(n)
         if n % 2 == 0:
             return render_template('6-number_odd_or_even.html',
                                    n=n,
