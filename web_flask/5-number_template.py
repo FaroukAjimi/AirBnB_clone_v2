@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-from flask import Flask, escape, request, abort
+from flask import Flask, escape, request, abort, render_template
 
 app = Flask(__name__)
 
@@ -38,6 +38,10 @@ def integer(n):
 
 @app.route("/number_template/<int:n>", strict_slashes=False)
 def render(n):
-    return render_template('5-number.html', n=n)
+    try:
+        int(n)
+        return render_template('5-number.html', n=n)
+    except:
+        abort(404)
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port='5000')
