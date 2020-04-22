@@ -27,7 +27,7 @@ def setted(text="is cool"):
     return ('Python ' + text)
 
 
-@app.route("/number/<n>")
+@app.route("/number/<n>", strict_slashes=False)
 def integer(n):
     try:
         int(n)
