@@ -36,7 +36,7 @@ def integer(n):
         abort(404)
 
 
-@app.route("/number_template/<n>")
+@app.route("/number_template/<n>", strict_slashes=False)
 def render(n):
     try:
         int(n)
