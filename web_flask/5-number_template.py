@@ -40,7 +40,7 @@ def integer(n):
 def render(n):
     try:
         int(n)
-        return render_template('5-number.html', num=n)
+        return render_template('5-number.html', n=n)
     except:
         abort(404)
 if __name__ == '__main__':
